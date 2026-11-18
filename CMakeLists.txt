@@ -5,7 +5,8 @@ project(e24-network-solver LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(e24-network-solver main.cpp)
+add_executable(e24-network-solver main.cpp
+    README.md)
 
 include(GNUInstallDirs)
 install(TARGETS e24-network-solver

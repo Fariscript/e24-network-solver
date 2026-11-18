@@ -31,11 +31,38 @@ vector<double> RValues(vector<double>Base)
     return result;
 }
 
+double readTargetResistance()
+{
+    cout << "Input target resistance" << endl;
+    while(true){
+        double resistance = 0;
+        if(cin >> resistance){
+            bool isValid = (resistance >0);
+            if(isValid){return resistance;}
+        } else {
+            if(cin.eof()){
+                exit(1);
+            }
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
+    }
+}
+
 int main()
 {
+    bool isContainedInE24 = false;
     vector<double> E24Rvalues = RValues(E24Base);
-    for (double item : E24Rvalues){
-        cout << item <<endl;             // sanity check that my RValues function works
+    double resistance = readTargetResistance();
+    for(double resistor : E24Rvalues){
+        if(resistor == resistance){
+            isContainedInE24 = true;
+        }
+    }
+    if(isContainedInE24){
+        cout << "Target Resistance is one of the E24 Values" << endl;
+    }  else {
+        cout << "Target Resistance is NOT one of the E24 Values" << endl;
     }
     return 0;
 }
