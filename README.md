@@ -13,6 +13,12 @@ This program will search through the available values and return the
 best combinations for a target resistance. An exact match often isn't
 possible, so "best" means the smallest error using the fewest resistors.
 
+<<<<<<< HEAD
+=======
+For example, a 0.73 Ω target can be reached with 1 Ω ∥ 2.7 Ω = 0.7297 Ω,
+which is about 0.04% off.
+
+>>>>>>> 9bbe7f54c5014814b292f0e149b2468348d5086e
 ## The E24 series
 
 E24 is a standard set of 24 resistor values per decade, typically sold
@@ -28,10 +34,22 @@ support other series or the resistors you actually own.
 
 The program is in early development.
 
+<<<<<<< HEAD
 - [x] Build the E24 values from 1 Ω to 10 MΩ
 - [x] Read and validate a target resistance
 - [ ] Find the closest single resistor
 
+=======
+- [X] Build the E24 values from 1 Ω to 10 MΩ (169 values)
+- [ ] Find the closest single resistor
+- [ ] Find the best pair (series and parallel)
+- [ ] Find networks of 3 resistors
+- [ ] Find networks of 4–5 resistors
+- [ ] Accept input like 4.7k and 2M
+- [ ] Support other series (E12, E96)
+- [ ] Support a custom list of resistors
+- [ ] Add a web interface
+>>>>>>> 9bbe7f54c5014814b292f0e149b2468348d5086e
 
 ## Build and run
 
@@ -39,8 +57,12 @@ Requires a C++17 compiler and CMake.
 
 1. Open `CMakeLists.txt` in Qt Creator.
 2. Choose a kit with a C++17 compiler.
+<<<<<<< HEAD
 3. Enable **Run in terminal** under Projects → Run Settings.
 4. Press Ctrl+R, then type a resistance in ohms when asked.
+=======
+3. Press Ctrl+R to build and run.
+>>>>>>> 9bbe7f54c5014814b292f0e149b2468348d5086e
 
 ## References
 
